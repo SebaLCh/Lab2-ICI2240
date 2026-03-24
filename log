@@ -49,3 +49,37 @@ list.c:78:1: error: control reaches end of non-void function [-Werror=return-typ
       | ^
 cc1: all warnings being treated as errors
 a4c6b26
+Tue Mar 24 10:11:18 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:58:17: error: ‘Node’ has no member named ‘dato’; did you mean ‘data’?
+   58 |     return aux->dato;
+      |                 ^~~~
+      |                 data
+list.c: In function ‘lastList’:
+list.c:69:17: error: ‘Node’ has no member named ‘dato’; did you mean ‘data’?
+   69 |     return aux->dato;
+      |                 ^~~~
+      |                 data
+list.c: In function ‘prevList’:
+list.c:77:17: error: ‘Node’ has no member named ‘dato’; did you mean ‘data’?
+   77 |     return aux->dato;
+      |                 ^~~~
+      |                 data
+list.c: In function ‘nextList’:
+list.c:59:1: error: control reaches end of non-void function [-Werror=return-type]
+   59 | }
+      | ^
+list.c: In function ‘lastList’:
+list.c:70:1: error: control reaches end of non-void function [-Werror=return-type]
+   70 | }
+      | ^
+list.c: In function ‘prevList’:
+list.c:78:1: error: control reaches end of non-void function [-Werror=return-type]
+   78 | }
+      | ^
+cc1: all warnings being treated as errors
+2892e10
