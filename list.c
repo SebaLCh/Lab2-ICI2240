@@ -134,8 +134,11 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
     if(list == NULL) return NULL;
     Node *aux = list->current;
-    list->current->next->prev = list->current->prev;
-    list->current = list->current->next;
+    Node *izq = list->current->prev;
+    Node *der = list->current->next;
+    izq->next = der;
+    der->prev = izq;
+    list->current = izq->next;
     return aux->data;
 }
 
