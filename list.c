@@ -139,7 +139,7 @@ void * popCurrent(List * list) {
     if(izq == NULL && der != NULL){
         der->prev = izq;
     }
-    if else(izq != NULL && der == NULL){
+    else if(izq != NULL && der == NULL){
         izq->next = der;
     }
     else{
