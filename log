@@ -221,3 +221,22 @@ Fri Mar 27 05:59:28 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 05e60eb
+Fri Mar 27 06:10:30 PM UTC 2026: 
+ list.c | 24 ++++++++++++++----------
+ 1 file changed, 14 insertions(+), 10 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:142:35: error: expected ‘;’ before ‘}’ token
+  142 |         list->current = list->head
+      |                                   ^
+      |                                   ;
+  143 |     }
+      |     ~                              
+list.c:152:34: error: expected ‘;’ before ‘}’ token
+  152 |         list->current = aux->next
+      |                                  ^
+      |                                  ;
+  153 |     }
+      |     ~                             
+4890861
