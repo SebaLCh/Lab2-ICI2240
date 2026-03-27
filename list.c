@@ -104,8 +104,6 @@ void pushCurrent(List * list, void * data) {
     if(list == NULL) return;
     Node *nuevoNodo = createNode(data);
     
-    
-    //Node *izq = list->current;
     nuevoNodo->prev = list->current; 
     nuevoNodo->next = list->current->next;
     if(list->current->next == NULL){
@@ -113,7 +111,6 @@ void pushCurrent(List * list, void * data) {
         nuevoNodo->next = NULL;
     }
     else{
-        //Node *drc = list->current->next;
         list->current->next->prev = nuevoNodo;
     }
     
@@ -135,7 +132,11 @@ void * popBack(List * list) {
 // Nota: El current debe quedar apuntando al nodo siguiente del eliminado.
 
 void * popCurrent(List * list) {
-    return NULL;
+    if(list == NULL) return NULL;
+    Node *aux = list->current;
+    list->current->next->prev = list->current->prev;
+    list->current = list->current->next;
+    return aux->data;
 }
 
 void cleanList(List * list) {
